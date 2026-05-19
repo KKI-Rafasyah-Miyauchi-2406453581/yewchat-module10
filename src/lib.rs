@@ -14,10 +14,6 @@ use yew_router::prelude::*;
 use components::chat::Chat;
 use components::login::Login;
 
-// When the `wee_alloc` feature is enabled, this uses `wee_alloc` as the global
-// allocator.
-//
-// If you don't want to use `wee_alloc`, you can safely delete this.
 #[cfg(feature = "wee_alloc")]
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
@@ -51,7 +47,7 @@ fn main() -> Html {
     html! {
         <ContextProvider<User> context={(*ctx).clone()}>
             <BrowserRouter>
-                <div class="flex w-screen h-screen">
+                <div id="app-container" class="flex w-screen h-screen">
                     <Switch<Route> render={Switch::render(switch)}/>
                 </div>
             </BrowserRouter>
