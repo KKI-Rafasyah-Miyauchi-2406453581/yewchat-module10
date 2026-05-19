@@ -19,3 +19,12 @@ This repository is divided to branches that correspond to the blog post sections
 * websockets - The code at the end of the Hello Websockets! section.
 * components-part2 - The code at the end of the Components-Phase 2 section.
 * websockets-part2 - The code at the end of the WebSockets-Phase 2 section.
+
+# Module 10 - Yew WebChat
+
+## Experiment 3.1: Original code
+
+![Original Yew Chat](static/exp3_1_original.png)
+
+**Explanation:**
+To run the original code, I cloned the NodeJS WebSocket server (`SimpleWebsocketServer`) and ran it in the background using `npm start` so it listens for incoming websocket connections. Then, I compiled and ran the Yew frontend using `npm start`, which uses Webpack and wasm-pack to build the Rust code into WebAssembly and serve it to the browser.
